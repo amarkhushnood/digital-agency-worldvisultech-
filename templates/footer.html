@@ -1,0 +1,107 @@
+
+    <!-- footer section start -->
+
+    <footer class="footer-section">
+        <div class="container">
+          <div class="footer-columns">
+            <!-- Addresses -->
+            <div class="footer-column">
+              <h3>ADDRESS ---</h3>
+              <p>
+                <i class="fa-solid fa-location-dot footi"></i> superior college multan road  Lahore
+              </p>
+              <p>
+                <i class="fa-solid fa-envelope footi"></i> Email: worldvisualtech@gmail.com
+              </p>
+              <p><i class="fa-solid fa-phone footi"></i> Phone: 03221140834</p>
+            </div>
+  
+            <!-- Quick Links -->
+            <div class="footer-column">
+              <h3>Quick Links ---</h3>
+              <ul>
+                <li>
+                  <a href="/"
+                    ><i class="fa-solid fa-angle-right footi"></i> Home</a
+                  >
+                </li>
+                <li>
+                  <a href="/services">
+                    <i class="fa-solid fa-angle-right footi"></i> Services</a
+                  >
+                </li>
+                <li>
+                  <a href="/about">
+                    <i class="fa-solid fa-angle-right footi"></i> About Us</a
+                  >
+                </li>
+                <li>
+                  <a href="/contact"
+                    ><i class="fa-solid fa-angle-right footi"></i> Contact</a
+                  >
+                </li>
+              </ul>
+            </div>
+  
+            <!-- Newsletter -->
+            <div class="footer-column">
+              <h3>Newsletter ---</h3>
+              <form
+              method="post"
+              action="{% url 'saveenquiry2' %}"
+              id="contact"
+              class="footer-news-form"
+            >
+              {% csrf_token %}
+                <p>
+                  <span
+                    >Enter your email address below to subscribe to our news and
+                    stay up-to-date on the latest news, events, and
+                    announcements.</span
+                  >
+                </p>
+                <input
+                  type="email"
+                  id="footer-email"
+                  name="email"
+                  placeholder="Enter your email"
+                  required
+                />
+                <input type="submit" value="Subscribe" />
+              </form>
+            </div>
+          </div>
+  
+          <!-- Social Media Links -->
+  
+          <div class="footer-row" >
+            <div class="social-media-links" >
+              <a 
+              href="https://www.facebook.com/world.visual.tech?mibextid=ZbWKwL "
+              target="_blank"
+              ><i class="fa-brands fa-facebook"></i
+            ></a>
+            <a
+            href="https://www.instagram.com/wordvisualtech?igsh=MWd2czhzMXlpYWNiMA== "
+            target="_blank"
+            ><i class="fa-brands fa-square-instagram"></i
+          ></a>
+          <a
+          href="https://www.linkedin.com/in/world-visual-tech-8557a62b1?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+          target="_blank"
+          ><i class="fa-brands fa-linkedin"></i
+        ></a>
+        <a
+        href="https://x.com/worldvisualtech?s=21&t=u47dtI7x9tDvPMKMTmA3Zw"
+        target="_blank"
+        ><i class="fa-brands fa-twitter"></i
+      ></a>
+            </div>
+          </div>
+        </div>
+      </footer>
+  
+      <!-- footer section end -->
+    </body>
+  </html>
+  

@@ -1,0 +1,287 @@
+{% include "header.html" %}
+
+<style>
+  label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+  }
+
+  select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+</style>
+<span id="agency1"></span>
+        <!-- Hero Section start -->
+        <section class="graphicdesign-hero-head">
+          <div class="container">
+            <div class="about-head">
+              
+            </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </header>
+
+    <section class="about-section">
+        <div class="about-content">
+          <h2>About <b>World Visual Tech</b></h2>
+          <p>
+            Welcome to <b>World Visual Tech</b>, your creative partner in the world of graphic design. We are a passionate team of designers dedicated to bringing your ideas to life through innovative and visually stunning designs.
+          </p>
+          <p>
+            At <b>World Visual Tech</b>, we believe in the power of design to make a lasting impact. Whether you're looking for eye-catching branding, compelling marketing materials, or engaging digital experiences, our team is here to transform your vision into reality.
+          </p>
+          <p>
+            Our designers are not just skilled professionals; they are storytellers who understand the art and science of visual communication. We take the time to understand your brand, your audience, and your objectives to create designs that resonate and captivate.
+          </p>
+          <p>
+            From logo design and print materials to web graphics and social media visuals, we cover a spectrum of design services to elevate your brand identity. Our commitment to quality, creativity, and client satisfaction sets us apart as a reliable partner for all your design needs.
+          </p>
+          <a href="#contact" class="cta-button">Start Your Project</a>
+        </div>
+        <div class="about-img">
+          <img src="/static/img/GDaboutpicc.jpg" alt="[Your Agency Name] Design Team" />
+        </div>
+      </section>
+
+           
+    <!-- services section start -->
+
+    <section class="sevices-section">
+        <div class="services">
+          <div class="services-heading">
+            <p><span>--- Our Services ---</span></p>
+            <h1>Explore Our Services</h1>
+            <br /><br />
+          </div>
+        <div class="services-box-digitalM">
+            {% for i in graphicdesignservicesData %}
+          <div class="service">
+          <span class="{{i.graphicservices_icon}}"></span>
+
+          <h3>{{i.graphicservices_title}}</h3>
+          <p>{{i.graphicservices_dec}}</p>
+          <a href="#contact" class="services-cta-buttonM">Get Started </a>
+        </div>
+            
+            {% endfor %}
+          </div> 
+        </div>
+      </section>
+  
+      <!-- services section end -->
+
+
+      <section class="projects-section">
+        <h2>Our Recently Completed Projects</h2>
+        <div class="project-container">
+          <div class="project-box">
+            <img src="/static/img/gdp1.jpg" alt="Project 1">
+            <h3>Pixel Perfection</h3>
+          </div>
+          <div class="project-box">
+            <img src="/static/img/gdp2.jpg" alt="Project 2">
+            <h3>Spectral Splendor</h3>
+          </div>
+          <div class="project-box">
+            <img src="/static/img/gdp3.jpg" alt="Project 3">
+            <h3>Whimsical Wanderlust</h3>
+          </div>
+          <div class="project-box">
+            <img src="/static/img/gdp4.jpg" alt="Project 3">
+            <h3>Urban Mosaic</h3>
+          </div>
+          
+          
+          <!-- Add more projects as needed -->
+        </div>
+      </section>
+
+
+       <!-- team section start -->
+       <section class="team-section">
+        <p class="head"><span></span>--- Our Team ---<span></span></p>
+        <h1 class="text-center mb-5">Meet Our Team</h1>
+      
+        <div class="team-members">
+          <!-- First Column -->
+          {% for i in ourteamData %}
+          <div class="team-member">
+            <img class="team-pic" src="{{i.per_icon}}" alt="Team Member 1" />
+            <h3>{{i.per_name}}</h3>
+            <p>{{i.per_designation}}</p>
+            <hr />
+      
+            
+      <a
+      href="https://www.facebook.com/world.visual.tech?mibextid=ZbWKwL "
+      target="_blank"
+      ><i class="fa-brands fa-facebook"></i
+    ></a>
+    <a
+      href="https://www.instagram.com/wordvisualtech?igsh=MWd2czhzMXlpYWNiMA== "
+      target="_blank"
+      ><i class="fa-brands fa-square-instagram"></i
+    ></a>
+    <a
+      href="https://www.linkedin.com/in/world-visual-tech-8557a62b1?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+      target="_blank"
+      ><i class="fa-brands fa-linkedin"></i
+    ></a>
+    <a
+      href="https://x.com/worldvisualtech?s=21&t=u47dtI7x9tDvPMKMTmA3Zw"
+      target="_blank"
+      ><i class="fa-brands fa-twitter"></i
+    ></a>
+          </div>
+          {% endfor %}
+        </div>
+      </section>
+      <!-- team section end -->
+
+
+   <!-- testimonial section start -->
+
+<section class="testimonial-section">
+  <p class="head"><span></span>--- Testimonial ---<span></span></p>
+  <h1>What does Our Client Say!</h1>
+
+  <div class="testi-box">
+    <div class="testimonial-box" id="testimonial1">
+      <img src="/static/img/testimonial-1.jpg" alt="Client 1" />
+      <h3>James</h3>
+      <p>
+        "Incredible results! This tech agency exceeded expectations, delivering
+        top-notch solutions that propelled our business to new heights."<br />
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star-half"></i>
+      </p>
+    </div>
+
+    <div class="testimonial-box" id="testimonial2">
+      <img src="/static/img/testimonial-2.jpg" alt="Client 2" />
+      <h3>Emma</h3>
+      <p>
+        "Impeccable service! Swift, reliable, and innovative - our collaboration
+        with this agency has been a game-changer for our digital presence."<br />
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star-half"></i>
+      </p>
+    </div>
+    <div class="testimonial-box" id="testimonial2">
+      <img src="/static/img/testimonial-4.jpg" alt="Client 2" />
+      <h3>William</h3>
+      <p>
+        "Exceptional expertise! This agency's tech solutions are a catalyst for
+        success, seamlessly integrating creativity and functionality."<br />
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star-half"></i>
+      </p>
+    </div>
+    <div class="testimonial-box" id="testimonial2">
+      <img src="/static/img/testimonial-3.jpg" alt="Client 2" />
+      <h3>Emily</h3>
+      <p>
+        "Game-changing solutions! This agency not only understands our needs but
+        consistently delivers tech services that elevate our brand to the next
+        level."<br />
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star-half"></i>
+      </p>
+    </div>
+
+    <!-- Add more testimonials as needed -->
+  </div>
+</section>
+
+<!-- testimonial section end -->
+      
+
+      
+    <!-- contact section start -->
+<br><br><br>
+<br><br><br>
+    <section class="contact-section" id="contact">
+        <p class="head"><span></span>--- Contact Us ---<span></span></p>
+        <h1>Contact For Any Query</h1>
+  
+        <form
+        id="contact-form"
+        action="https://api.web3forms.com/submit"
+        method="POST"
+      >
+        <input
+          type="hidden"
+          name="access_key"
+          value="3fb76b33-88de-42c3-a79b-298130902485"
+        />
+        <input type="text" id="name" name="name" required placeholder="Your Name" />
+    
+        <input
+          type="text"
+          id="email"
+          name="email"
+          required
+          placeholder="Your Email"
+        />
+
+        <select id="service" name="service">
+          <option value="" disabled selected required>
+            Select a  Service
+          </option>
+          <option value="Logo Design">Logo Design</option>
+          <option value="Illustrations">Illustrations</option>
+          <option value="Web Design">Web Design</option>
+          <option value="UI/UX Design">UI/UX Design</option>
+          <option value="Photo Editing and Enhancement">Photo Editing and Enhancement</option>
+          <option value="Typography Design">Typography Design</option>
+          <option value="Packaging Design">Packaging Design</option>
+          <option value="Infographics">Infographics</option>
+          <!-- Add more service options as needed -->
+        </select>
+  
+          <input
+            type="text"
+            id="subject"
+            name="subject"
+            required
+            placeholder="Subject"
+          />
+
+  
+          <textarea
+            id="message"
+            name="message"
+            rows="4"
+            required
+            placeholder="Message"
+          ></textarea>
+  
+          <button type="submit">Send Message</button>
+        </form>
+      </section>
+  
+      <!-- contact section end -->
+  
+  
+
+      {% include "footer.html" %}

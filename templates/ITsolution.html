@@ -1,0 +1,289 @@
+{% include "header.html" %}
+
+<style>
+  label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+  }
+
+  select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+</style>
+
+        <!-- Hero Section start -->
+        <section class="ITsoultions-hero-head">
+          <div class="container">
+            <div class="about-head">
+              
+            </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </header>
+    <section class="about-section">
+        <div class="about-content">
+          <h2>About Us</h2>
+          <p>
+            Welcome to <b>World Visual Tech</b>, a dynamic IT solution agency committed to delivering cutting-edge and comprehensive technology solutions tailored to meet the evolving needs of businesses across diverse industries.
+          </p>
+          <h3>Our Expertise----</h3>
+          <ul>
+            <li><strong>Front-End Web Development:</strong> Crafting visually appealing and user-friendly interfaces that captivate audiences and enhance the overall user experience.</li>
+            <li><strong>App Development:</strong> Building robust and scalable mobile applications across platforms, ensuring seamless performance and functionality.</li>
+            <li><strong>Software Development:</strong> Developing bespoke software solutions tailored to address the unique challenges and requirements of your business operations.</li>
+            <li><strong>Full-Stack Development:</strong> Harnessing the power of both front-end and back-end technologies to create comprehensive and integrated solutions.</li>
+          </ul>
+          <h3>Why Choose <b>World Visual Tech</b>----</h3>
+          <ul>
+            <li><strong>Innovative Solutions:</strong> We thrive on innovation, staying ahead of industry trends to provide you with the latest and most effective technological solutions.</li>
+            <li><strong>Client-Centric Approach:</strong> Your success is our priority. We collaborate closely with clients, understanding their goals and challenges to deliver solutions that exceed expectations.</li>
+            <li><strong>Experienced Team:</strong> Our team of skilled professionals brings a wealth of experience and expertise to every project, ensuring high-quality outcomes.</li>
+            <li><strong>Agile Development:</strong> We embrace agile methodologies, fostering flexibility and adaptability throughout the development process to accommodate changing requirements.</li>
+            <li><strong>Commitment to Quality:</strong> Quality is non-negotiable. We adhere to rigorous quality standards, conducting thorough testing to ensure the reliability and performance of our solutions.</li>
+          </ul>
+          <a href="#contact" class="cta-button">Start Your Project</a>
+        </div>
+        <div class="about-img">
+          <img src="/static/img/aboutITpic.jpg" alt="About [Your Company Name]" />
+        </div>
+      </section>
+      
+      <!-- services section start -->
+
+      <section class="sevices-section">
+        <div class="services">
+          <div class="services-heading">
+            <p><span>--- Our Services ---</span></p>
+            <h1>Explore Our Agencies</h1>
+            <br /><br />
+          </div>
+          <div class="services-box-digitalM">
+            {% for i in techsolutionservicesData %}
+          <div class="service">
+          <span class="{{i.techservices_icon}}"></span>
+
+          <h3>{{i.techservices_title}}</h3>
+          <p>{{i.techservices_dec}}</p>
+          <a href="#contact" class="services-cta-buttonM">Get Started </a>
+        </div>
+           
+            {% endfor %}
+          </div>
+        </div>
+      </section>
+  
+      <!-- services section end -->
+  
+      <!-- services section end -->
+
+
+      <section class="projects-section">
+        <h2>Our Recently Completed Projects</h2>
+        <div class="project-container">
+          <div class="project-box">
+            <img src="/static/img/tsp1.jpg" alt="Project 1">
+            <h3>DataSync Solutions</h3>
+          </div>
+          <div class="project-box">
+            <img src="/static/img/tsp2.jpg" alt="Project 2">
+            <h3>TechForge Innovations</h3>
+          </div>
+          <div class="project-box">
+            <img src="/static/img/tsp3.jpg" alt="Project 3">
+            <h3>Appify Pro Services</h3>
+          </div>
+          <div class="project-box">
+            <img src="/static/img/tsp4.jpg" alt="Project 3">
+            <h3>CloudWorks Agency</h3>
+          </div>
+          
+          
+          <!-- Add more projects as needed -->
+        </div>
+      </section>
+
+
+       <!-- team section start -->
+       <section class="team-section">
+        <p class="head"><span></span>--- Our Team ---<span></span></p>
+        <h1 class="text-center mb-5">Meet Our Team</h1>
+      
+        <div class="team-members">
+          <!-- First Column -->
+          {% for i in ourteamData %}
+          <div class="team-member">
+            <img class="team-pic" src="{{i.per_icon}}" alt="Team Member 1" />
+            <h3>{{i.per_name}}</h3>
+            <p>{{i.per_designation}}</p>
+            <hr />
+      
+            
+      <a
+      href="https://www.facebook.com/world.visual.tech?mibextid=ZbWKwL "
+      target="_blank"
+      ><i class="fa-brands fa-facebook"></i
+    ></a>
+    <a
+      href="https://www.instagram.com/wordvisualtech?igsh=MWd2czhzMXlpYWNiMA== "
+      target="_blank"
+      ><i class="fa-brands fa-square-instagram"></i
+    ></a>
+    <a
+      href="https://www.linkedin.com/in/world-visual-tech-8557a62b1?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+      target="_blank"
+      ><i class="fa-brands fa-linkedin"></i
+    ></a>
+    <a
+      href="https://x.com/worldvisualtech?s=21&t=u47dtI7x9tDvPMKMTmA3Zw"
+      target="_blank"
+      ><i class="fa-brands fa-twitter"></i
+    ></a>
+          </div>
+          {% endfor %}
+        </div>
+      </section>
+  
+      <!-- team section end -->
+
+
+     <!-- testimonial section start -->
+
+<section class="testimonial-section">
+  <p class="head"><span></span>--- Testimonial ---<span></span></p>
+  <h1>What does Our Client Say!</h1>
+
+  <div class="testi-box">
+    <div class="testimonial-box" id="testimonial1">
+      <img src="/static/img/testimonial-1.jpg" alt="Client 1" />
+      <h3>James</h3>
+      <p>
+        "Incredible results! This tech agency exceeded expectations, delivering
+        top-notch solutions that propelled our business to new heights."<br />
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star-half"></i>
+      </p>
+    </div>
+
+    <div class="testimonial-box" id="testimonial2">
+      <img src="/static/img/testimonial-2.jpg" alt="Client 2" />
+      <h3>Emma</h3>
+      <p>
+        "Impeccable service! Swift, reliable, and innovative - our collaboration
+        with this agency has been a game-changer for our digital presence."<br />
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star-half"></i>
+      </p>
+    </div>
+    <div class="testimonial-box" id="testimonial2">
+      <img src="/static/img/testimonial-4.jpg" alt="Client 2" />
+      <h3>William</h3>
+      <p>
+        "Exceptional expertise! This agency's tech solutions are a catalyst for
+        success, seamlessly integrating creativity and functionality."<br />
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star-half"></i>
+      </p>
+    </div>
+    <div class="testimonial-box" id="testimonial2">
+      <img src="/static/img/testimonial-3.jpg" alt="Client 2" />
+      <h3>Emily</h3>
+      <p>
+        "Game-changing solutions! This agency not only understands our needs but
+        consistently delivers tech services that elevate our brand to the next
+        level."<br />
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star-half"></i>
+      </p>
+    </div>
+
+    <!-- Add more testimonials as needed -->
+  </div>
+</section>
+
+<!-- testimonial section end -->
+      
+
+      
+    <!-- contact section start -->
+<br><br><br>
+<br><br><br>
+    <section class="contact-section" id="contact">
+        <p class="head"><span></span>--- Contact Us ---<span></span></p>
+        <h1>Contact For Any Query</h1>
+  
+        <form
+    id="contact-form"
+    action="https://api.web3forms.com/submit"
+    method="POST"
+  >
+    <input
+      type="hidden"
+      name="access_key"
+      value="3fb76b33-88de-42c3-a79b-298130902485"
+    />
+    <input type="text" id="name" name="name" required placeholder="Your Name" />
+
+    <input
+      type="text"
+      id="email"
+      name="email"
+      required
+      placeholder="Your Email"
+    />
+  
+    <select id="service" name="service">
+      <option value="" disabled selected required>
+        Select a  Service
+      </option>
+      <option value="Project Management">Project Management</option>
+      <option value="Database Management">Database Management</option>
+      <option value="full-stack web development">full-stack web development</option>
+      <option value="App development">App development</option>
+      
+      <!-- Add more service options as needed -->
+    </select>
+          <input
+            type="text"
+            id="subject"
+            name="subject"
+            required
+            placeholder="Subject"
+          />
+  
+          <textarea
+            id="message"
+            name="message"
+            rows="4"
+            required
+            placeholder="Message"
+          ></textarea>
+  
+          <button type="submit">Send Message</button>
+        </form>
+      </section>
+  
+      <!-- contact section end -->
+  
+  
+
+      {% include "footer.html" %}

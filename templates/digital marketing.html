@@ -1,0 +1,286 @@
+{% include "header.html" %}
+
+<style>
+  select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+</style>
+
+<!-- Hero Section start -->
+
+<section class="digitalmarketing-hero-head">
+  <div class="container">
+    <div class="about-head"></div>
+  </div>
+</section>
+
+<section class="about-section">
+  <div class="about-content">
+    <h2>About <b>World Visual Tech</b></h2>
+    <p>
+      Welcome to <b>World Visual Tech</b>, a leading digital marketing agency
+      dedicated to helping businesses thrive in the online world. We are
+      passionate about delivering exceptional results and driving growth for our
+      clients.
+    </p>
+    <p>
+      At <b>World Visual Tech</b>, we understand that the digital landscape is
+      constantly evolving. That's why we stay at the forefront of industry
+      trends and technologies to provide innovative solutions tailored to meet
+      your unique business goals.
+    </p>
+    <p>
+      Our team of experienced professionals is committed to delivering top-notch
+      digital marketing services, including search engine optimization (SEO),
+      social media marketing, content creation, email marketing, and more. We
+      take a holistic approach to digital marketing, ensuring a cohesive
+      strategy that maximizes your online presence and delivers measurable
+      results.
+    </p>
+    <p>
+      What sets us apart is our dedication to client success. We believe in
+      building long-lasting relationships and working collaboratively with our
+      clients to understand their vision and objectives. Your success is our
+      success, and we take pride in being a trusted partner on your journey to
+      online excellence.
+    </p>
+    <a href="#contact" class="cta-button">Get in Touch</a>
+  </div>
+  <div class="about-img">
+    <img src="/static/img/digitalmark-about.jpg" alt="img" />
+  </div>
+</section>
+
+<!-- services section start -->
+
+<section class="sevices-section">
+  <div class="services">
+    <div class="services-heading">
+      <p><span>--- Our Services ---</span></p>
+      <h1>Explore Our Services</h1>
+      <br /><br />
+    </div>
+    <div class="services-box-digitalM">
+      {% for i in digitalmarketingservicesData %}
+      <div class="service">
+        <span class="{{i.digitalservices_icon}}"></span>
+
+        <h3>{{i.digitalservices_title}}</h3>
+        <p>{{i.digitalservices_dec}}</p>
+        <a href="#contact" class="services-cta-buttonM">Get Started </a>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- services section end -->
+
+<section class="projects-section">
+  <h2>Our Recently Completed Projects</h2>
+  <div class="project-container">
+    <div class="project-box">
+      <a href=" /static/img/DP1.jpg" target="_blank"
+        ><img src="/static/img/DP1.jpg" alt="Project 1"
+      /></a>
+      <h3>Social Media Marketing Project</h3>
+    </div>
+    <div class="project-box">
+      <a href=" /static/img/DP2.jpg" target="_blank"
+        ><img src="/static/img/DP2.jpg" alt="Project 1"
+      /></a>
+      <h3>SEO Optimization Project</h3>
+    </div>
+    <div class="project-box">
+      <a href=" /static/img/DP03.jpg" target="_blank"
+        ><img src="/static/img/DP03.jpg" alt="Project 1"
+      /></a>
+      <h3>Email Marketing Campaign</h3>
+    </div>
+    <div class="project-box">
+      <a href=" /static/img/DP-04.jpg" target="_blank"
+        ><img src="/static/img/DP-04.jpg" alt="Project 1"
+      /></a>
+      <h3>Digital Marketing Campaign</h3>
+    </div>
+
+    <!-- Add more projects as needed -->
+  </div>
+</section>
+
+<!-- team section start -->
+<section class="team-section">
+  <p class="head"><span></span>--- Our Team ---<span></span></p>
+  <h1 class="text-center mb-5">Meet Our Team</h1>
+
+  <div class="team-members">
+    <!-- First Column -->
+    {% for i in ourteamData %}
+    <div class="team-member">
+      <img class="team-pic" src="{{i.per_icon}}" alt="Team Member 1" />
+      <h3>{{i.per_name}}</h3>
+      <p>{{i.per_designation}}</p>
+      <hr />
+
+      <a
+        href="https://www.facebook.com/world.visual.tech?mibextid=ZbWKwL "
+        target="_blank"
+        ><i class="fa-brands fa-facebook"></i
+      ></a>
+      <a
+        href="https://www.instagram.com/wordvisualtech?igsh=MWd2czhzMXlpYWNiMA== "
+        target="_blank"
+        ><i class="fa-brands fa-square-instagram"></i
+      ></a>
+      <a
+        href="https://www.linkedin.com/in/world-visual-tech-8557a62b1?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+        target="_blank"
+        ><i class="fa-brands fa-linkedin"></i
+      ></a>
+      <a
+        href="https://x.com/worldvisualtech?s=21&t=u47dtI7x9tDvPMKMTmA3Zw"
+        target="_blank"
+        ><i class="fa-brands fa-twitter"></i
+      ></a>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+
+<!-- team section end -->
+
+<!-- testimonial section start -->
+
+<section class="testimonial-section">
+  <p class="head"><span></span>--- Testimonial ---<span></span></p>
+  <h1>What does Our Client Say!</h1>
+
+  <div class="testi-box">
+    <div class="testimonial-box" id="testimonial1">
+      <img src="/static/img/testimonial-1.jpg" alt="Client 1" />
+      <h3>James</h3>
+      <p>
+        "Incredible results! This tech agency exceeded expectations, delivering
+        top-notch solutions that propelled our business to new heights."<br />
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star-half"></i>
+      </p>
+    </div>
+
+    <div class="testimonial-box" id="testimonial2">
+      <img src="/static/img/testimonial-2.jpg" alt="Client 2" />
+      <h3>Emma</h3>
+      <p>
+        "Impeccable service! Swift, reliable, and innovative - our collaboration
+        with this agency has been a game-changer for our digital presence."<br />
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star-half"></i>
+      </p>
+    </div>
+    <div class="testimonial-box" id="testimonial2">
+      <img src="/static/img/testimonial-4.jpg" alt="Client 2" />
+      <h3>William</h3>
+      <p>
+        "Exceptional expertise! This agency's tech solutions are a catalyst for
+        success, seamlessly integrating creativity and functionality."<br />
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star-half"></i>
+      </p>
+    </div>
+    <div class="testimonial-box" id="testimonial2">
+      <img src="/static/img/testimonial-3.jpg" alt="Client 2" />
+      <h3>Emily</h3>
+      <p>
+        "Game-changing solutions! This agency not only understands our needs but
+        consistently delivers tech services that elevate our brand to the next
+        level."<br />
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star-half"></i>
+      </p>
+    </div>
+
+    <!-- Add more testimonials as needed -->
+  </div>
+</section>
+
+<!-- testimonial section end -->
+
+<!-- contact section start -->
+<br /><br /><br />
+<br /><br /><br />
+<section class="contact-section" id="contact">
+  <p class="head"><span></span>--- Contact Us ---<span></span></p>
+  <h1>Contact For Any Query</h1>
+
+  <form
+    id="contact-form"
+    action="https://api.web3forms.com/submit"
+    method="POST"
+  >
+    <input
+      type="hidden"
+      name="access_key"
+      value="3fb76b33-88de-42c3-a79b-298130902485"
+    />
+    <input type="text" id="name" name="name" required placeholder="Your Name" />
+
+    <input
+      type="text"
+      id="email"
+      name="email"
+      required
+      placeholder="Your Email"
+    />
+
+    <select id="service" name="service">
+      <option value="" disabled selected required>Select a Service</option>
+      <option value="seo">Search Engine Optimization (SEO)</option>
+      <option value="social_media">Social Media Marketing</option>
+      <option value="ppc">Pay-Per-Click Advertising (PPC)</option>
+      <option value="Email Marketing">Email Marketing</option>
+      <option value="Content Marketing">Content Marketing</option>
+      <option value="Video Marketing">Video Marketing</option>
+      <option value="Mobile Marketing">Mobile Marketing</option>
+      <!-- Add more service options as needed -->
+    </select>
+
+    <input
+      type="text"
+      id="subject"
+      name="subject"
+      required
+      placeholder="Subject"
+    />
+
+    <textarea
+      id="message"
+      name="message"
+      rows="4"
+      required
+      placeholder="Message"
+    ></textarea>
+
+    <button type="submit">Send Message</button>
+  </form>
+</section>
+
+<!-- contact section end -->
+
+{% include "footer.html" %}

@@ -1,0 +1,134 @@
+{% include "header.html" %}
+<!-- Hero Section start -->
+
+<section class="about-hero-head">
+  <div class="container">
+    <div class="about-head">
+      <p><span>About Us</span></p>
+      <hr class="about-hr" />
+    </div>
+  </div>
+</section>
+
+<!-- navbar & Hero Section end -->
+
+<!-- About Section start -->
+<section class="about-section">
+  <div class="about-content">
+    <h2>About Us ---</h2>
+    <p>
+      Welcome to [Your Company Name], a dynamic enterprise established with the
+      vision of offering unparalleled services across diverse industries.
+    </p>
+    <p>
+      Explore our world of agencies, each excelling in their respective domains:
+    </p>
+    <ul>
+      <li>
+        <strong>Digital Marketing Agency:</strong> Empowering businesses with
+        cutting-edge digital strategies.
+      </li>
+      <li>
+        <strong>Graphic Design Agency:</strong> Unleashing creativity through
+        visually stunning designs that captivate <br />
+        and communicate.
+      </li>
+      <li>
+        <strong>Travel Services:</strong> Redefining travel experiences with
+        personalized services and seamless journeys.
+      </li>
+      <li>
+        <strong>Technology Solutions:</strong> Pioneering tech solutions to
+        address the evolving needs of the digital landscape.
+      </li>
+      <!-- Add more agencies as needed -->
+    </ul>
+    <p>
+      Join us on our journey as we continue to set new standards of excellence
+      in the realms of digital marketing, travel, technology, and beyond.
+    </p>
+    <a href="#newsletter" class="read-more-btn">Join Us</a>
+  </div>
+  <div class="about-img">
+    <img class="aboutimg" src="/static/img/logoo.png" alt="" />
+  </div>
+</section>
+
+<!-- about section end -->
+
+<!-- newsletter section start -->
+
+<section class="newsletter-section" id="newsletter">
+  <h1 class="news-h1">--- NEWSLETTER ---</h1>
+  <h1 class="news-h2">Stay Connected with Us!</h1>
+  <p class="news-p">
+    Enter your email address below to subscribe to our news and stay up-to-date
+    <br />
+    on the latest news, events, and announcements.
+  </p>
+  <form
+    method="post"
+    action="{% url 'saveenquiry2' %}"
+    id="contact"
+    class="news-form"
+  >
+    {% csrf_token %}
+    <input
+      type="email"
+      id="email"
+      name="email"
+      placeholder="Enter your email"
+      required
+    />
+    <input
+      type="submit"
+      value="Subscribe "
+      class="news-sub-btn"
+      style="background-color: orange; color: black"
+    />
+  </form>
+</section>
+
+<!-- newsletter section end -->
+
+<!-- team section start -->
+<section class="team-section">
+  <p class="head"><span></span>--- Our Team ---<span></span></p>
+  <h1 class="text-center mb-5">Meet Our Team</h1>
+
+  <div class="team-members">
+    <!-- First Column -->
+    {% for i in ourteamData %}
+    <div class="team-member">
+      <img class="team-pic" src="{{i.per_icon}}" alt="Team Member 1" />
+      <h3>{{i.per_name}}</h3>
+      <p>{{i.per_designation}}</p>
+      <hr />
+
+      <a
+        href="https://www.facebook.com/world.visual.tech?mibextid=ZbWKwL "
+        target="_blank"
+        ><i class="fa-brands fa-facebook"></i
+      ></a>
+      <a
+        href="https://www.instagram.com/wordvisualtech?igsh=MWd2czhzMXlpYWNiMA== "
+        target="_blank"
+        ><i class="fa-brands fa-square-instagram"></i
+      ></a>
+      <a
+        href="https://www.linkedin.com/in/world-visual-tech-8557a62b1?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+        target="_blank"
+        ><i class="fa-brands fa-linkedin"></i
+      ></a>
+      <a
+        href="https://x.com/worldvisualtech?s=21&t=u47dtI7x9tDvPMKMTmA3Zw"
+        target="_blank"
+        ><i class="fa-brands fa-twitter"></i
+      ></a>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+<!-- team section end -->
+
+{% include "footer.html" %}

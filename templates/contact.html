@@ -1,0 +1,54 @@
+{% include "header.html" %}
+
+<!-- Hero Section start -->
+<section class="about-hero-head">
+  <div class="container">
+    <div class="about-head">
+      <p><span>Contact Us</span></p>
+      <hr class="about-hr" />
+    </div>
+  </div>
+</section>
+<!-- navbar & Hero Section end -->
+
+<!-- contact section start -->
+
+<section class="contact-section" style="margin-top: 80px">
+  <p class="head"><span></span>--- Contact Us ---<span></span></p>
+  <h1>Contact For Any Query</h1>
+
+  <form method="post" action="{% url 'saveenquiry' %}" id="contact">
+    {% csrf_token %}
+    <input type="text" id="name" name="name" required placeholder="Your Name" />
+
+    <input
+      type="text"
+      id="email"
+      name="email"
+      required
+      placeholder="Your Email"
+    />
+
+    <input
+      type="text"
+      id="subject"
+      name="subject"
+      required
+      placeholder="Subject"
+    />
+
+    <textarea
+      id="message"
+      name="message"
+      rows="4"
+      required
+      placeholder="Message"
+    ></textarea>
+
+    <button type="submit">Send Message</button>
+  </form>
+</section>
+
+<!-- contact section end -->
+
+{% include "footer.html" %}

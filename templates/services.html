@@ -1,0 +1,181 @@
+{% include "header.html" %}
+
+<!-- Hero Section start -->
+<section class="about-hero-head" id="top">
+  <div class="container">
+    <div class="about-head">
+      <p><span>Our service</span></p>
+      <hr class="about-hr" />
+    </div>
+  </div>
+</section>
+
+<!-- navbar & Hero Section end -->
+
+<section class="sevices-section">
+  <div class="services">
+    <div class="services-heading">
+      <p><span>--- Our Services ---</span></p>
+      <h1>Explore Our Agencies</h1>
+      <br /><br />
+    </div>
+    <div class="services-box">
+      <div class="service">
+        <i class="fa-solid fa-ranking-star"></i>
+
+        <h3>Digital Maketing Agency</h3>
+        <p>
+          Unlock the full potential of your online presence with our
+          cutting-edge digital marketing strategies. From SEO optimization to
+          targeted PPC campaigns, we tailor solutions that elevate your brand's
+          visibility and drive results.
+        </p>
+        <a href="/digitalmarketing" class="services-cta-button">visit</a>
+      </div>
+      <div class="service">
+        <i class="fa-solid fa-ranking-star"></i>
+        <h3>Graphic Design Agency</h3>
+        <p>
+          Transform your ideas into visually stunning realities. Our graphic
+          design team crafts captivating visuals, from eye-catching logos to
+          engaging marketing collateral. Elevate your brand aesthetics and make
+          a lasting impression.
+        </p>
+        <a href="/graphicdesign" class="services-cta-button">visit</a>
+      </div>
+      <div class="service">
+        <i class="fa-solid fa-ranking-star"></i>
+        <h3>Tech Solutions Agency</h3>
+        <p>
+          Tech Solutions Agency Empower your business with innovative technology
+          solutions. We specialize in front-end and app development, ensuring
+          seamless user experiences. From software development to full-stack
+          solutions, we bring your digital aspirations to life.
+        </p>
+        <a href="/ITsolution" class="services-cta-button">visit</a>
+      </div>
+      <div class="service">
+        <i class="fa-solid fa-ranking-star"></i>
+        <h3>Travel Agency</h3>
+        <p>
+          Embark on unforgettable journeys with our travel agency. Discover the
+          most engaging places, curated itineraries, and seamless booking
+          experiences. Let's explore the world together, creating memories that
+          last a lifetime.
+        </p>
+        <a href="/travelagency" class="services-cta-button">visit</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- testimonial section start -->
+
+<section class="testimonial-section">
+  <p class="head"><span></span>--- Testimonial ---<span></span></p>
+  <h1>What Say Our Clients!</h1>
+
+  <div class="testi-box">
+    <div class="testimonial-box" id="testimonial1">
+      <img src="/static/img/testimonial-1.jpg" alt="Client 1" />
+      <h3>James</h3>
+      <p>
+        "Incredible results! This tech agency exceeded expectations, delivering
+        top-notch solutions that propelled our business to new heights."<br />
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star-half"></i>
+      </p>
+    </div>
+
+    <div class="testimonial-box" id="testimonial2">
+      <img src="/static/img/testimonial-2.jpg" alt="Client 2" />
+      <h3>Emma</h3>
+      <p>
+        "Impeccable service! Swift, reliable, and innovative - our collaboration
+        with this agency has been a game-changer for our digital presence."<br />
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star-half"></i>
+      </p>
+    </div>
+    <div class="testimonial-box" id="testimonial2">
+      <img src="/static/img/testimonial-4.jpg" alt="Client 2" />
+      <h3>William</h3>
+      <p>
+        "Exceptional expertise! This agency's tech solutions are a catalyst for
+        success, seamlessly integrating creativity and functionality."<br />
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star-half"></i>
+      </p>
+    </div>
+    <div class="testimonial-box" id="testimonial2">
+      <img src="/static/img/testimonial-3.jpg" alt="Client 2" />
+      <h3>Emily</h3>
+      <p>
+        "Game-changing solutions! This agency not only understands our needs but
+        consistently delivers tech services that elevate our brand to the next
+        level."<br />
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star-half"></i>
+      </p>
+    </div>
+
+    <!-- Add more testimonials as needed -->
+  </div>
+</section>
+
+<!-- testimonial section end -->
+
+<!-- team section start -->
+<section class="team-section">
+  <p class="head"><span></span>--- Our Team ---<span></span></p>
+  <h1 class="text-center mb-5">Meet Our Team</h1>
+
+  <div class="team-members">
+    <!-- First Column -->
+    {% for i in ourteamData %}
+    <div class="team-member">
+      <img class="team-pic" src="{{i.per_icon}}" alt="Team Member 1" />
+      <h3>{{i.per_name}}</h3>
+      <p>{{i.per_designation}}</p>
+      <hr />
+
+      <a
+        href="https://www.facebook.com/world.visual.tech?mibextid=ZbWKwL "
+        target="_blank"
+        ><i class="fa-brands fa-facebook"></i
+      ></a>
+      <a
+        href="https://www.instagram.com/wordvisualtech?igsh=MWd2czhzMXlpYWNiMA== "
+        target="_blank"
+        ><i class="fa-brands fa-square-instagram"></i
+      ></a>
+      <a
+        href="https://www.linkedin.com/in/world-visual-tech-8557a62b1?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+        target="_blank"
+        ><i class="fa-brands fa-linkedin"></i
+      ></a>
+      <a
+        href="https://x.com/worldvisualtech?s=21&t=u47dtI7x9tDvPMKMTmA3Zw"
+        target="_blank"
+        ><i class="fa-brands fa-twitter"></i
+      ></a>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+
+<!-- team section end -->
+
+{% include "footer.html" %}
